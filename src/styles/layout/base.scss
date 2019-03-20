@@ -1,6 +1,28 @@
-.hand {
-    width: 150px;
-    height: 150px;
-    display: block;
-    fill: blue;
+
+.hello {
+    width: 70px;
+    height: 120px;
+    transform: rotate(45deg);
+    background-color: $hi;
 }
+.dog {
+    @extend.hello;
+    width: 10px;
+}
+.cat {
+    @include Bro;
+}
+
+.ten {
+    @include sister (end, 167px);
+
+    @if $size == 461px {
+        color: burlywood;
+    }
+}
+
+@each $social in (fb, vk, inst, twit) {
+    .social_#{$social} {
+        background: url('./img/#{$social}.png') center center no-repeat;
+    }
+} 

@@ -1,0 +1,14 @@
+$hi: green;
+$color: brown;
+$size: 461px;
+
+@mixin Bro {
+    border: 1px solid black;
+    display: flex;
+}
+
+@mixin sister ($text-align: center, $big: 123px) {
+    border: 2px solid $color;
+    width: $big;
+    text-align: $text-align;
+}
